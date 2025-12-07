@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bounce to the Summit – Game Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Pixel-style font (optional but makes it match the poster more) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      /* light blue sky + white grid, similar to your poster */
+      background-color: #8fd7ff;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.45) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.45) 1px, transparent 1px);
+      background-size: 70px 70px;
+      color: #102030;
+      line-height: 1.6;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1.5rem 2rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 3rem;
+      background: rgba(233, 247, 255, 0.92);
+      border-radius: 12px;
+      border: 3px solid #ffffff;
+      box-shadow: 0 10px 0 rgba(16, 32, 64, 0.4);
+    }
+
+    h1 {
+      font-family: "Press Start 2P", system-ui, sans-serif;
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #ffd94a;
+      text-shadow:
+        -3px 3px #5c3900,
+        0 0 4px #00000099;
+    }
+
+    h2 {
+      font-family: "Press Start 2P", system-ui, sans-serif;
+      font-size: 1rem;
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 3px solid #ffd94a;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #26435f;
+    }
+
+    p {
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+
+    .tagline {
+      font-size: 0.9rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0.5rem auto 1.5rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.9rem 1.8rem;
+      border-radius: 4px;
+      border: 3px solid #f8961e;
+      background: #ffd94a;
+      color: #1a1a1a;
+      font-family: "Press Start 2P", system-ui, sans-serif;
+      font-size: 0.75rem;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 6px 0 #b95d13;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: transform 0.05s ease, box-shadow 0.05s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(2px);
+      box-shadow: 0 3px 0 #b95d13;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 768px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    li {
+      margin-bottom: 0.3rem;
+      font-size: 0.95rem;
+    }
+
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .media-grid img {
+      width: 100%;
+      border-radius: 6px;
+      border: 3px solid #ffffff;
+      box-shadow: 0 6px 0 rgba(16, 32, 64, 0.4);
+      object-fit: cover;
+      image-rendering: pixelated;
+    }
+
+    iframe {
+      border-radius: 6px;
+      border: 3px solid #ffffff;
+      box-shadow: 0 6px 0 rgba(16, 32, 64, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      opacity: 0.8;
+      font-family: "Press Start 2P", system-ui, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    a {
+      color: #1d63b3;
+    }
+
+    main section + section {
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Bounce to the Summit</h1>
+  <p class="tagline">
+  A vertical platformer where you bounce through elemental worlds of Water, Earth, Air, and Fire. Don’t fall, reach the portal, and master all four.
+  </p>
+  <a href="game.html" class="btn-primary">▶ Play the Game</a>
+</header>
+
+<main class="container">
+
+  <!-- Game Pitch -->
+  <section>
+    <h2>Game Pitch</h2>
+    <div class="two-col">
+      <div>
+        <p><strong>Concept:</strong> Bounce to the Summit is a vertical platformer where you control a small bouncing ball, jumping from platform to platform to reach a glowing portal at the top of each level. Each level is themed around a classical element and introduces new obstacles and mechanics.</p>
+        <p><strong>Genre:</strong> 2D Vertical Platformer / Action-Platformer with light puzzle elements.</p>
+        <p><strong>Gameplay:</strong> Use directional keys to move and carefully timed jumps (including a double jump) to climb. Each element changes how platforms behave such as popping bubbles, crumbling logs, moving platforms, and more.</p>
+        <p><strong>Features:</strong>
+          Element-based levels, double-jump system, vertical scrolling camera, retry UI and level badges, and portal transitions between levels.
+        </p>
+      </div>
+      <div>
+        <p><strong>Setting:</strong> A stylized elemental world divided into four realms: Water, Earth, Air, and Fire. Each one has distinct backgrounds, platforms, and mood.</p>
+        <p><strong>Team:</strong></p>
+        <ul>
+          <li>Althea Bacon – Game Pitch, Level 1 &amp; 4 Graphics, Introduction, Instructions &amp; End Message Graphics, Website</li>
+          <li>Sukaina Al-akwaa – Game Pitch, Level 2 &amp; 3 Graphics, Programming of all Levels</li>
+          <li>Justin Bacon [external] – Game Testing, Game Demo Recording</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Description & Instructions -->
+  <section>
+    <h2>Description &amp; Instructions</h2>
+    <p><strong>Description:</strong> Climb your way up through elemental stages by bouncing from platform to platform. Reach the portal at the top to advance to the next element, and avoid falling off the bottom of the screen.</p>
+    <p><strong>Controls:</strong></p>
+    <ul>
+      <li><kbd>←</kbd>/<kbd>→</kbd> – Move left/right</li>
+      <li><kbd>Space</kbd> – Jump</li>
+      <li><kbd>Space</kbd> again – Double jump (slightly higher/longer)</li>
+    </ul>
+    <p><strong>Goal:</strong> Stay on the platforms, learn how each element behaves, and reach the final portal without falling.</p>
+  </section>
+
+  <!-- Demo Video -->
+  <section>
+    <h2>Demo Video</h2>
+    <iframe
+      width="100%" height="360"
+      src="https://www.youtube.com/embed/Jn4aV9m5Dcg"
+      title="Bounce to the Summit Demo"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- Screenshots -->
+  <section>
+    <h2>Screenshots</h2>
+    <div class="media-grid">
+      <img src="screenshots/Intro.png" alt="Intro screenshot" />
+      <img src="screenshots/Instructions.png" alt="Instructions screenshot" />
+      <img src="screenshots/water.PNG" alt="Water level screenshot" />
+      <img src="screenshots/earth.PNG" alt="Earth level screenshot" />
+      <img src="screenshots/air.PNG" alt="Air level screenshot" />
+      <img src="screenshots/fire.PNG" alt="Fire level screenshot" />
+      <img src="screenshots/Message.png" alt="End message screenshot" />
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  &copy; <span id="year"></span> Bounce to the Summit – Bacon & Al-akwaa.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
